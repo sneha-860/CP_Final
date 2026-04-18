@@ -1,0 +1,707 @@
+// Mock Data for CampusPlacement System
+
+export const mockStudents = [
+  {
+    id: 'STU001',
+    rollNo: 'CS21B001',
+    name: 'Arjun Sharma',
+    email: 'arjun.sharma@college.edu',
+    branch: 'Computer Science',
+    year: 4,
+    cgpa: 8.9,
+    skills: ['React', 'Node.js', 'Python', 'Machine Learning', 'SQL'],
+    phone: '+91 9876543210',
+    resume: 'arjun_resume.pdf',
+    status: 'Placed',
+    placedCompany: 'TechCorp',
+    placedRole: 'Software Engineer',
+    placedCTC: 12,
+    profileComplete: 100
+  },
+  {
+    id: 'STU002',
+    rollNo: 'EC21B015',
+    name: 'Priya Patel',
+    email: 'priya.patel@college.edu',
+    branch: 'Electronics & Communication',
+    year: 4,
+    cgpa: 9.2,
+    skills: ['Embedded Systems', 'C++', 'VLSI', 'IoT', 'Python'],
+    phone: '+91 9876543211',
+    resume: 'priya_resume.pdf',
+    status: 'In Process',
+    profileComplete: 100
+  },
+  {
+    id: 'STU003',
+    rollNo: 'ME21B022',
+    name: 'Rahul Verma',
+    email: 'rahul.verma@college.edu',
+    branch: 'Mechanical Engineering',
+    year: 4,
+    cgpa: 8.5,
+    skills: ['CAD', 'ANSYS', 'SolidWorks', 'Manufacturing', 'Robotics'],
+    phone: '+91 9876543212',
+    resume: 'rahul_resume.pdf',
+    status: 'Unplaced',
+    profileComplete: 90
+  },
+  {
+    id: 'STU004',
+    rollNo: 'CS21B012',
+    name: 'Sneha Reddy',
+    email: 'sneha.reddy@college.edu',
+    branch: 'Computer Science',
+    year: 4,
+    cgpa: 9.5,
+    skills: ['Java', 'Spring Boot', 'AWS', 'Docker', 'Kubernetes'],
+    phone: '+91 9876543213',
+    resume: 'sneha_resume.pdf',
+    status: 'Placed',
+    placedCompany: 'CloudTech Solutions',
+    placedRole: 'Backend Developer',
+    placedCTC: 15,
+    profileComplete: 100
+  },
+  {
+    id: 'STU005',
+    rollNo: 'IT21B008',
+    name: 'Vikram Singh',
+    email: 'vikram.singh@college.edu',
+    branch: 'Information Technology',
+    year: 4,
+    cgpa: 8.7,
+    skills: ['Angular', 'TypeScript', 'MongoDB', 'Express', 'Node.js'],
+    phone: '+91 9876543214',
+    resume: 'vikram_resume.pdf',
+    status: 'In Process',
+    profileComplete: 95
+  },
+  {
+    id: 'STU006',
+    rollNo: 'CS21B025',
+    name: 'Ananya Krishnan',
+    email: 'ananya.krishnan@college.edu',
+    branch: 'Computer Science',
+    year: 4,
+    cgpa: 9.0,
+    skills: ['React Native', 'Flutter', 'Firebase', 'UI/UX', 'JavaScript'],
+    phone: '+91 9876543215',
+    resume: 'ananya_resume.pdf',
+    status: 'Placed',
+    placedCompany: 'MobileFirst Inc',
+    placedRole: 'Mobile Developer',
+    placedCTC: 11,
+    profileComplete: 100
+  },
+  {
+    id: 'STU007',
+    rollNo: 'EC21B030',
+    name: 'Karthik Menon',
+    email: 'karthik.menon@college.edu',
+    branch: 'Electronics & Communication',
+    year: 4,
+    cgpa: 8.3,
+    skills: ['Signal Processing', 'MATLAB', 'Python', 'Deep Learning', 'TensorFlow'],
+    phone: '+91 9876543216',
+    resume: 'karthik_resume.pdf',
+    status: 'Unplaced',
+    profileComplete: 85
+  },
+  {
+    id: 'STU008',
+    rollNo: 'IT21B019',
+    name: 'Divya Iyer',
+    email: 'divya.iyer@college.edu',
+    branch: 'Information Technology',
+    year: 4,
+    cgpa: 8.8,
+    skills: ['Data Science', 'Python', 'R', 'Tableau', 'SQL'],
+    phone: '+91 9876543217',
+    resume: 'divya_resume.pdf',
+    status: 'In Process',
+    profileComplete: 100
+  },
+  {
+    id: 'STU009',
+    rollNo: 'CS21B033',
+    name: 'Aditya Gupta',
+    email: 'aditya.gupta@college.edu',
+    branch: 'Computer Science',
+    year: 4,
+    cgpa: 9.3,
+    skills: ['Cybersecurity', 'Ethical Hacking', 'Network Security', 'Python', 'Linux'],
+    phone: '+91 9876543218',
+    resume: 'aditya_resume.pdf',
+    status: 'Placed',
+    placedCompany: 'SecureNet Systems',
+    placedRole: 'Security Analyst',
+    placedCTC: 13,
+    profileComplete: 100
+  },
+  {
+    id: 'STU010',
+    rollNo: 'ME21B041',
+    name: 'Pooja Nair',
+    email: 'pooja.nair@college.edu',
+    branch: 'Mechanical Engineering',
+    year: 4,
+    cgpa: 8.1,
+    skills: ['AutoCAD', 'CATIA', 'Thermal Engineering', 'CFD', 'Project Management'],
+    phone: '+91 9876543219',
+    resume: 'pooja_resume.pdf',
+    status: 'Unplaced',
+    profileComplete: 80
+  }
+];
+
+export const mockCompanies = [
+  {
+    id: 'COMP001',
+    name: 'TechCorp',
+    industry: 'Information Technology',
+    logo: 'https://via.placeholder.com/100x100?text=TC',
+    description: 'Leading software development company specializing in enterprise solutions',
+    website: 'www.techcorp.com',
+    hrName: 'Rajesh Kumar',
+    hrEmail: 'hr@techcorp.com',
+    hrPhone: '+91 9988776655',
+    visitDate: '2024-03-15',
+    status: 'Completed',
+    rolesOffered: ['Software Engineer', 'Data Analyst'],
+    ctcRange: '10-15 LPA'
+  },
+  {
+    id: 'COMP002',
+    name: 'CloudTech Solutions',
+    industry: 'Cloud Computing',
+    logo: 'https://via.placeholder.com/100x100?text=CTS',
+    description: 'Cloud infrastructure and DevOps solutions provider',
+    website: 'www.cloudtech.com',
+    hrName: 'Meera Desai',
+    hrEmail: 'hr@cloudtech.com',
+    hrPhone: '+91 9988776656',
+    visitDate: '2024-03-20',
+    status: 'Active',
+    rolesOffered: ['Backend Developer', 'DevOps Engineer'],
+    ctcRange: '12-18 LPA'
+  },
+  {
+    id: 'COMP003',
+    name: 'MobileFirst Inc',
+    industry: 'Mobile Applications',
+    logo: 'https://via.placeholder.com/100x100?text=MFI',
+    description: 'Mobile app development company with focus on consumer apps',
+    website: 'www.mobilefirst.com',
+    hrName: 'Amit Saxena',
+    hrEmail: 'hr@mobilefirst.com',
+    hrPhone: '+91 9988776657',
+    visitDate: '2024-03-25',
+    status: 'Active',
+    rolesOffered: ['Mobile Developer', 'UI/UX Designer'],
+    ctcRange: '9-14 LPA'
+  },
+  {
+    id: 'COMP004',
+    name: 'SecureNet Systems',
+    industry: 'Cybersecurity',
+    logo: 'https://via.placeholder.com/100x100?text=SNS',
+    description: 'Enterprise cybersecurity and threat intelligence solutions',
+    website: 'www.securenet.com',
+    hrName: 'Kavita Sharma',
+    hrEmail: 'hr@securenet.com',
+    hrPhone: '+91 9988776658',
+    visitDate: '2024-04-05',
+    status: 'Upcoming',
+    rolesOffered: ['Security Analyst', 'Penetration Tester'],
+    ctcRange: '11-16 LPA'
+  },
+  {
+    id: 'COMP005',
+    name: 'DataDriven Analytics',
+    industry: 'Data Science & AI',
+    logo: 'https://via.placeholder.com/100x100?text=DDA',
+    description: 'AI and machine learning solutions for businesses',
+    website: 'www.datadriven.com',
+    hrName: 'Sanjay Patel',
+    hrEmail: 'hr@datadriven.com',
+    hrPhone: '+91 9988776659',
+    visitDate: '2024-04-10',
+    status: 'Upcoming',
+    rolesOffered: ['Data Scientist', 'ML Engineer'],
+    ctcRange: '14-20 LPA'
+  }
+];
+
+export const mockJobs = [
+  {
+    id: 'JOB001',
+    companyId: 'COMP001',
+    companyName: 'TechCorp',
+    title: 'Software Engineer',
+    description: 'Develop and maintain enterprise software applications using modern technologies.',
+    requiredSkills: ['React', 'Node.js', 'SQL', 'Git'],
+    eligibleBranches: ['Computer Science', 'Information Technology'],
+    minCGPA: 7.5,
+    ctc: 12,
+    location: 'Bangalore',
+    type: 'Full-time',
+    openings: 8,
+    applicationDeadline: '2024-03-10',
+    status: 'Closed',
+    postedDate: '2024-02-15'
+  },
+  {
+    id: 'JOB002',
+    companyId: 'COMP002',
+    companyName: 'CloudTech Solutions',
+    title: 'Backend Developer',
+    description: 'Build scalable backend systems and APIs for cloud-based applications.',
+    requiredSkills: ['Java', 'Spring Boot', 'AWS', 'Docker'],
+    eligibleBranches: ['Computer Science', 'Information Technology', 'Electronics & Communication'],
+    minCGPA: 8.0,
+    ctc: 15,
+    location: 'Hyderabad',
+    type: 'Full-time',
+    openings: 5,
+    applicationDeadline: '2024-03-18',
+    status: 'Active',
+    postedDate: '2024-02-20'
+  },
+  {
+    id: 'JOB003',
+    companyId: 'COMP002',
+    companyName: 'CloudTech Solutions',
+    title: 'DevOps Engineer',
+    description: 'Manage CI/CD pipelines and cloud infrastructure.',
+    requiredSkills: ['Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Python'],
+    eligibleBranches: ['Computer Science', 'Information Technology'],
+    minCGPA: 7.8,
+    ctc: 14,
+    location: 'Hyderabad',
+    type: 'Full-time',
+    openings: 3,
+    applicationDeadline: '2024-03-18',
+    status: 'Active',
+    postedDate: '2024-02-20'
+  },
+  {
+    id: 'JOB004',
+    companyId: 'COMP003',
+    companyName: 'MobileFirst Inc',
+    title: 'Mobile Developer',
+    description: 'Develop cross-platform mobile applications using React Native or Flutter.',
+    requiredSkills: ['React Native', 'Flutter', 'JavaScript', 'Firebase'],
+    eligibleBranches: ['Computer Science', 'Information Technology'],
+    minCGPA: 7.5,
+    ctc: 11,
+    location: 'Pune',
+    type: 'Full-time',
+    openings: 6,
+    applicationDeadline: '2024-03-22',
+    status: 'Active',
+    postedDate: '2024-02-25'
+  },
+  {
+    id: 'JOB005',
+    companyId: 'COMP004',
+    companyName: 'SecureNet Systems',
+    title: 'Security Analyst',
+    description: 'Monitor and analyze security threats, perform vulnerability assessments.',
+    requiredSkills: ['Cybersecurity', 'Network Security', 'Python', 'Linux'],
+    eligibleBranches: ['Computer Science', 'Information Technology', 'Electronics & Communication'],
+    minCGPA: 8.0,
+    ctc: 13,
+    location: 'Bangalore',
+    type: 'Full-time',
+    openings: 4,
+    applicationDeadline: '2024-04-01',
+    status: 'Active',
+    postedDate: '2024-03-05'
+  },
+  {
+    id: 'JOB006',
+    companyId: 'COMP005',
+    companyName: 'DataDriven Analytics',
+    title: 'Data Scientist',
+    description: 'Analyze large datasets and build predictive models using machine learning.',
+    requiredSkills: ['Python', 'Machine Learning', 'SQL', 'Tableau', 'Statistics'],
+    eligibleBranches: ['Computer Science', 'Information Technology', 'Electronics & Communication'],
+    minCGPA: 8.5,
+    ctc: 16,
+    location: 'Bangalore',
+    type: 'Full-time',
+    openings: 3,
+    applicationDeadline: '2024-04-08',
+    status: 'Active',
+    postedDate: '2024-03-10'
+  },
+  {
+    id: 'JOB007',
+    companyId: 'COMP005',
+    companyName: 'DataDriven Analytics',
+    title: 'ML Engineer',
+    description: 'Deploy and maintain machine learning models in production environments.',
+    requiredSkills: ['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Docker'],
+    eligibleBranches: ['Computer Science', 'Information Technology'],
+    minCGPA: 8.3,
+    ctc: 18,
+    location: 'Remote',
+    type: 'Full-time',
+    openings: 2,
+    applicationDeadline: '2024-04-08',
+    status: 'Active',
+    postedDate: '2024-03-10'
+  },
+  {
+    id: 'JOB008',
+    companyId: 'COMP001',
+    companyName: 'TechCorp',
+    title: 'Data Analyst',
+    description: 'Analyze business data and create reports to drive decision making.',
+    requiredSkills: ['SQL', 'Excel', 'Python', 'Data Visualization'],
+    eligibleBranches: ['Computer Science', 'Information Technology', 'Electronics & Communication', 'Mechanical Engineering'],
+    minCGPA: 7.0,
+    ctc: 10,
+    location: 'Bangalore',
+    type: 'Full-time',
+    openings: 4,
+    applicationDeadline: '2024-03-10',
+    status: 'Closed',
+    postedDate: '2024-02-15'
+  }
+];
+
+export const mockApplications = [
+  {
+    id: 'APP001',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    studentBranch: 'Computer Science',
+    studentCGPA: 8.9,
+    jobId: 'JOB001',
+    companyName: 'TechCorp',
+    role: 'Software Engineer',
+    appliedDate: '2024-02-20',
+    status: 'Offer',
+    ctc: 12
+  },
+  {
+    id: 'APP002',
+    studentId: 'STU002',
+    studentName: 'Priya Patel',
+    studentBranch: 'Electronics & Communication',
+    studentCGPA: 9.2,
+    jobId: 'JOB002',
+    companyName: 'CloudTech Solutions',
+    role: 'Backend Developer',
+    appliedDate: '2024-02-22',
+    status: 'Interview',
+    ctc: 15
+  },
+  {
+    id: 'APP003',
+    studentId: 'STU003',
+    studentName: 'Rahul Verma',
+    studentBranch: 'Mechanical Engineering',
+    studentCGPA: 8.5,
+    jobId: 'JOB008',
+    companyName: 'TechCorp',
+    role: 'Data Analyst',
+    appliedDate: '2024-02-21',
+    status: 'Rejected',
+    ctc: 10
+  },
+  {
+    id: 'APP004',
+    studentId: 'STU004',
+    studentName: 'Sneha Reddy',
+    studentBranch: 'Computer Science',
+    studentCGPA: 9.5,
+    jobId: 'JOB002',
+    companyName: 'CloudTech Solutions',
+    role: 'Backend Developer',
+    appliedDate: '2024-02-23',
+    status: 'Offer',
+    ctc: 15
+  },
+  {
+    id: 'APP005',
+    studentId: 'STU005',
+    studentName: 'Vikram Singh',
+    studentBranch: 'Information Technology',
+    studentCGPA: 8.7,
+    jobId: 'JOB003',
+    companyName: 'CloudTech Solutions',
+    role: 'DevOps Engineer',
+    appliedDate: '2024-02-24',
+    status: 'Shortlisted',
+    ctc: 14
+  },
+  {
+    id: 'APP006',
+    studentId: 'STU006',
+    studentName: 'Ananya Krishnan',
+    studentBranch: 'Computer Science',
+    studentCGPA: 9.0,
+    jobId: 'JOB004',
+    companyName: 'MobileFirst Inc',
+    role: 'Mobile Developer',
+    appliedDate: '2024-02-26',
+    status: 'Offer',
+    ctc: 11
+  },
+  {
+    id: 'APP007',
+    studentId: 'STU007',
+    studentName: 'Karthik Menon',
+    studentBranch: 'Electronics & Communication',
+    studentCGPA: 8.3,
+    jobId: 'JOB005',
+    companyName: 'SecureNet Systems',
+    role: 'Security Analyst',
+    appliedDate: '2024-03-06',
+    status: 'Applied',
+    ctc: 13
+  },
+  {
+    id: 'APP008',
+    studentId: 'STU008',
+    studentName: 'Divya Iyer',
+    studentBranch: 'Information Technology',
+    studentCGPA: 8.8,
+    jobId: 'JOB006',
+    companyName: 'DataDriven Analytics',
+    role: 'Data Scientist',
+    appliedDate: '2024-03-11',
+    status: 'Shortlisted',
+    ctc: 16
+  },
+  {
+    id: 'APP009',
+    studentId: 'STU009',
+    studentName: 'Aditya Gupta',
+    studentBranch: 'Computer Science',
+    studentCGPA: 9.3,
+    jobId: 'JOB005',
+    companyName: 'SecureNet Systems',
+    role: 'Security Analyst',
+    appliedDate: '2024-03-07',
+    status: 'Offer',
+    ctc: 13
+  },
+  {
+    id: 'APP010',
+    studentId: 'STU010',
+    studentName: 'Pooja Nair',
+    studentBranch: 'Mechanical Engineering',
+    studentCGPA: 8.1,
+    jobId: 'JOB008',
+    companyName: 'TechCorp',
+    role: 'Data Analyst',
+    appliedDate: '2024-02-22',
+    status: 'Applied',
+    ctc: 10
+  }
+];
+
+export const mockInterviews = [
+  {
+    id: 'INT001',
+    studentId: 'STU002',
+    studentName: 'Priya Patel',
+    companyName: 'CloudTech Solutions',
+    role: 'Backend Developer',
+    round: 'Technical Round 1',
+    date: '2024-03-25',
+    time: '10:00 AM',
+    mode: 'Online',
+    link: 'https://meet.google.com/xyz-abc-def',
+    status: 'Scheduled'
+  },
+  {
+    id: 'INT002',
+    studentId: 'STU005',
+    studentName: 'Vikram Singh',
+    companyName: 'MobileFirst Inc',
+    role: 'Mobile Developer',
+    round: 'HR Round',
+    date: '2024-03-26',
+    time: '02:00 PM',
+    mode: 'Offline',
+    venue: 'Seminar Hall, Block A',
+    status: 'Scheduled'
+  },
+  {
+    id: 'INT003',
+    studentId: 'STU008',
+    studentName: 'Divya Iyer',
+    companyName: 'DataDriven Analytics',
+    role: 'Data Scientist',
+    round: 'Technical Round 1',
+    date: '2024-03-27',
+    time: '11:00 AM',
+    mode: 'Online',
+    link: 'https://zoom.us/j/123456789',
+    status: 'Scheduled'
+  },
+  {
+    id: 'INT004',
+    studentId: 'STU002',
+    studentName: 'Priya Patel',
+    companyName: 'DataDriven Analytics',
+    role: 'Data Scientist',
+    round: 'Group Discussion',
+    date: '2024-03-28',
+    time: '03:00 PM',
+    mode: 'Offline',
+    venue: 'Conference Room 2, Block B',
+    status: 'Scheduled'
+  },
+  {
+    id: 'INT005',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    companyName: 'TechCorp',
+    role: 'Software Engineer',
+    round: 'Technical Round 2',
+    date: '2024-03-05',
+    time: '09:30 AM',
+    mode: 'Online',
+    link: 'https://meet.google.com/abc-def-ghi',
+    status: 'Completed'
+  }
+];
+
+export const mockOffers = [
+  {
+    id: 'OFFER001',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    companyName: 'TechCorp',
+    role: 'Software Engineer',
+    ctc: 12,
+    joiningDate: '2024-07-15',
+    location: 'Bangalore',
+    offerDate: '2024-03-12',
+    status: 'Accepted',
+    breakdown: {
+      base: 9.6,
+      bonus: 1.2,
+      stocks: 1.2
+    }
+  },
+  {
+    id: 'OFFER002',
+    studentId: 'STU004',
+    studentName: 'Sneha Reddy',
+    companyName: 'CloudTech Solutions',
+    role: 'Backend Developer',
+    ctc: 15,
+    joiningDate: '2024-07-20',
+    location: 'Hyderabad',
+    offerDate: '2024-03-15',
+    status: 'Accepted',
+    breakdown: {
+      base: 12,
+      bonus: 1.5,
+      stocks: 1.5
+    }
+  },
+  {
+    id: 'OFFER003',
+    studentId: 'STU006',
+    studentName: 'Ananya Krishnan',
+    companyName: 'MobileFirst Inc',
+    role: 'Mobile Developer',
+    ctc: 11,
+    joiningDate: '2024-08-01',
+    location: 'Pune',
+    offerDate: '2024-03-18',
+    status: 'Pending',
+    breakdown: {
+      base: 8.8,
+      bonus: 1.1,
+      stocks: 1.1
+    }
+  },
+  {
+    id: 'OFFER004',
+    studentId: 'STU009',
+    studentName: 'Aditya Gupta',
+    companyName: 'SecureNet Systems',
+    role: 'Security Analyst',
+    ctc: 13,
+    joiningDate: '2024-07-25',
+    location: 'Bangalore',
+    offerDate: '2024-03-20',
+    status: 'Accepted',
+    breakdown: {
+      base: 10.4,
+      bonus: 1.3,
+      stocks: 1.3
+    }
+  }
+];
+
+export const mockNotifications = [
+  {
+    id: 'NOT001',
+    title: 'New Job Posted',
+    message: 'CloudTech Solutions has posted a new job for Backend Developer',
+    type: 'job',
+    date: '2024-03-20',
+    read: false
+  },
+  {
+    id: 'NOT002',
+    title: 'Application Shortlisted',
+    message: 'Your application for DevOps Engineer at CloudTech Solutions has been shortlisted',
+    type: 'application',
+    date: '2024-03-18',
+    read: false
+  },
+  {
+    id: 'NOT003',
+    title: 'Interview Scheduled',
+    message: 'Interview scheduled for Backend Developer role on March 25, 2024',
+    type: 'interview',
+    date: '2024-03-17',
+    read: true
+  },
+  {
+    id: 'NOT004',
+    title: 'Application Deadline',
+    message: 'Last date to apply for Security Analyst position is April 1, 2024',
+    type: 'deadline',
+    date: '2024-03-16',
+    read: true
+  },
+  {
+    id: 'NOT005',
+    title: 'Offer Letter Received',
+    message: 'Congratulations! You have received an offer from TechCorp',
+    type: 'offer',
+    date: '2024-03-12',
+    read: true
+  }
+];
+
+export const mockCredentials = {
+  student: {
+    email: 'student@college.edu',
+    password: 'student123',
+    defaultStudent: 'STU001'
+  },
+  admin: {
+    email: 'admin@college.edu',
+    password: 'admin123',
+    name: 'Dr. Ramesh Kumar',
+    designation: 'Placement Officer'
+  },
+  company: {
+    email: 'hr@cloudtech.com',
+    password: 'company123',
+    defaultCompany: 'COMP002'
+  }
+};
