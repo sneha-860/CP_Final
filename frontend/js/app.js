@@ -2,6 +2,8 @@
 import { auth } from './auth.js';
 import { toast } from './components/toast.js';
 
+window.toast = toast;
+
 class App {
     constructor() {
         this.appElement = document.getElementById('app');
@@ -50,25 +52,25 @@ class App {
 
         // Route mapping
         if (this.currentRoute === '') {
-            this.renderLoginPage();
+            await this.renderLoginPage();
         } else if (this.currentRoute.startsWith('student/')) {
             if (user.role !== 'student') {
                 window.location.hash = `#${user.role}/dashboard`;
                 return;
             }
-            this.renderStudentPage();
+            await this.renderStudentPage();
         } else if (this.currentRoute.startsWith('admin/')) {
             if (user.role !== 'admin') {
                 window.location.hash = `#${user.role}/dashboard`;
                 return;
             }
-            this.renderAdminPage();
+            await this.renderAdminPage();
         } else if (this.currentRoute.startsWith('company/')) {
             if (user.role !== 'company') {
                 window.location.hash = `#${user.role}/dashboard`;
                 return;
             }
-            this.renderCompanyPage();
+            await this.renderCompanyPage();
         } else {
             this.renderNotFound();
         }
@@ -213,3 +215,71 @@ class App {
 
 // Global instance
 window.app = new App();
+
+window.editStudentProfile = () => {
+    const skillForm = document.getElementById('add-skill-form');
+    const isEditing = skillForm && skillForm.classList.contains('hidden');
+    
+    if (skillForm) {
+        skillForm.classList.toggle('hidden');
+        if (!skillForm.classList.contains('hidden')) {
+            document.getElementById('new-skill-input').focus();
+        }
+    }
+
+    // Toggle contenteditable for profile fields
+    const fields = ['profile-name', 'profile-branch', 'profile-phone', 'profile-email'];
+    fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            if (isEditing) {
+                el.contentEditable = "true";
+                el.classList.add('border-b', 'border-primary/50', 'outline-none', 'bg-slate-50', 'px-2', 'rounded-lg');
+            } else {
+                el.contentEditable = "false";
+                el.classList.remove('border-b', 'border-primary/50', 'outline-none', 'bg-slate-50', 'px-2', 'rounded-lg');
+                
+                // Keep the underlying mock data updated in memory session
+                const user = auth.getUser();
+                if (user && user.data) {
+                    if (id === 'profile-name') user.data.name = el.innerText.trim();
+                    if (id === 'profile-branch') user.data.branch = el.innerText.trim();
+                    if (id === 'profile-phone') user.data.phone = el.innerText.trim();
+                    if (id === 'profile-email') user.data.email = el.innerText.trim();
+                }
+            }
+        }
+    });
+
+    const btn = document.getElementById('edit-profile-btn');
+    if (isEditing) {
+        if(btn) {
+            btn.innerHTML = 'Save Profile <i data-lucide="check" class="w-4 h-4 inline ml-2"></i>';
+            btn.classList.replace('bg-primary', 'bg-success');
+            if(window.lucide) window.lucide.createIcons({ root: btn });
+        }
+        window.toast?.show('You can now edit your profile and add skills.', 'info');
+    } else {
+        if(btn) {
+            btn.innerText = "Edit Profile";
+            btn.classList.replace('bg-success', 'bg-primary');
+        }
+        window.toast?.show('Profile saved successfully.', 'success');
+    }
+};
+
+window.addStudentSkill = (skill) => {
+    if (!skill.trim()) return;
+    const container = document.getElementById('skills-container');
+    const span = document.createElement('span');
+    span.className = 'px-4 py-2 bg-background rounded-xl text-sm font-bold text-text-primary border border-gray-100 transition-hover hover:border-primary hover:text-primary cursor-default';
+    span.textContent = skill.trim();
+    container.appendChild(span);
+    
+    // Attempt to update mock data object memory
+    const user = auth.getUser();
+    if (user && user.data && user.data.skills) {
+        user.data.skills.push(skill.trim());
+    }
+    window.toast?.show(`Added skill: ${skill.trim()}`, 'success') || console.log('Skill added');
+};

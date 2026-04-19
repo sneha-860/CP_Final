@@ -166,7 +166,7 @@ export const mockCompanies = [
     hrName: 'Rajesh Kumar',
     hrEmail: 'hr@techcorp.com',
     hrPhone: '+91 9988776655',
-    visitDate: '2024-03-15',
+    visitDate: '2026-03-15',
     status: 'Completed',
     rolesOffered: ['Software Engineer', 'Data Analyst'],
     ctcRange: '10-15 LPA'
@@ -181,7 +181,7 @@ export const mockCompanies = [
     hrName: 'Meera Desai',
     hrEmail: 'hr@cloudtech.com',
     hrPhone: '+91 9988776656',
-    visitDate: '2024-03-20',
+    visitDate: '2026-03-20',
     status: 'Active',
     rolesOffered: ['Backend Developer', 'DevOps Engineer'],
     ctcRange: '12-18 LPA'
@@ -196,7 +196,7 @@ export const mockCompanies = [
     hrName: 'Amit Saxena',
     hrEmail: 'hr@mobilefirst.com',
     hrPhone: '+91 9988776657',
-    visitDate: '2024-03-25',
+    visitDate: '2026-03-25',
     status: 'Active',
     rolesOffered: ['Mobile Developer', 'UI/UX Designer'],
     ctcRange: '9-14 LPA'
@@ -211,7 +211,7 @@ export const mockCompanies = [
     hrName: 'Kavita Sharma',
     hrEmail: 'hr@securenet.com',
     hrPhone: '+91 9988776658',
-    visitDate: '2024-04-05',
+    visitDate: '2026-04-05',
     status: 'Upcoming',
     rolesOffered: ['Security Analyst', 'Penetration Tester'],
     ctcRange: '11-16 LPA'
@@ -226,7 +226,7 @@ export const mockCompanies = [
     hrName: 'Sanjay Patel',
     hrEmail: 'hr@datadriven.com',
     hrPhone: '+91 9988776659',
-    visitDate: '2024-04-10',
+    visitDate: '2026-04-10',
     status: 'Upcoming',
     rolesOffered: ['Data Scientist', 'ML Engineer'],
     ctcRange: '14-20 LPA'
@@ -247,9 +247,9 @@ export const mockJobs = [
     location: 'Bangalore',
     type: 'Full-time',
     openings: 8,
-    applicationDeadline: '2024-03-10',
+    applicationDeadline: '2026-03-10',
     status: 'Closed',
-    postedDate: '2024-02-15'
+    postedDate: '2026-02-15'
   },
   {
     id: 'JOB002',
@@ -264,9 +264,9 @@ export const mockJobs = [
     location: 'Hyderabad',
     type: 'Full-time',
     openings: 5,
-    applicationDeadline: '2024-03-18',
+    applicationDeadline: '2026-03-18',
     status: 'Active',
-    postedDate: '2024-02-20'
+    postedDate: '2026-02-20'
   },
   {
     id: 'JOB003',
@@ -281,9 +281,9 @@ export const mockJobs = [
     location: 'Hyderabad',
     type: 'Full-time',
     openings: 3,
-    applicationDeadline: '2024-03-18',
+    applicationDeadline: '2026-03-18',
     status: 'Active',
-    postedDate: '2024-02-20'
+    postedDate: '2026-02-20'
   },
   {
     id: 'JOB004',
@@ -298,9 +298,9 @@ export const mockJobs = [
     location: 'Pune',
     type: 'Full-time',
     openings: 6,
-    applicationDeadline: '2024-03-22',
+    applicationDeadline: '2026-03-22',
     status: 'Active',
-    postedDate: '2024-02-25'
+    postedDate: '2026-02-25'
   },
   {
     id: 'JOB005',
@@ -315,9 +315,9 @@ export const mockJobs = [
     location: 'Bangalore',
     type: 'Full-time',
     openings: 4,
-    applicationDeadline: '2024-04-01',
+    applicationDeadline: '2026-04-01',
     status: 'Active',
-    postedDate: '2024-03-05'
+    postedDate: '2026-03-05'
   },
   {
     id: 'JOB006',
@@ -332,9 +332,9 @@ export const mockJobs = [
     location: 'Bangalore',
     type: 'Full-time',
     openings: 3,
-    applicationDeadline: '2024-04-08',
+    applicationDeadline: '2026-04-08',
     status: 'Active',
-    postedDate: '2024-03-10'
+    postedDate: '2026-03-10'
   },
   {
     id: 'JOB007',
@@ -349,9 +349,9 @@ export const mockJobs = [
     location: 'Remote',
     type: 'Full-time',
     openings: 2,
-    applicationDeadline: '2024-04-08',
+    applicationDeadline: '2026-04-08',
     status: 'Active',
-    postedDate: '2024-03-10'
+    postedDate: '2026-03-10'
   },
   {
     id: 'JOB008',
@@ -366,9 +366,9 @@ export const mockJobs = [
     location: 'Bangalore',
     type: 'Full-time',
     openings: 4,
-    applicationDeadline: '2024-03-10',
+    applicationDeadline: '2026-03-10',
     status: 'Closed',
-    postedDate: '2024-02-15'
+    postedDate: '2026-02-15'
   }
 ];
 
@@ -382,9 +382,48 @@ export const mockApplications = [
     jobId: 'JOB001',
     companyName: 'TechCorp',
     role: 'Software Engineer',
-    appliedDate: '2024-02-20',
+    appliedDate: '2026-02-20',
     status: 'Offer',
     ctc: 12
+  },
+  {
+    id: 'APP011',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    studentBranch: 'Computer Science',
+    studentCGPA: 8.9,
+    jobId: 'JOB002',
+    companyName: 'CloudTech Solutions',
+    role: 'Backend Developer',
+    appliedDate: '2026-02-21',
+    status: 'Shortlisted',
+    ctc: 15
+  },
+  {
+    id: 'APP012',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    studentBranch: 'Computer Science',
+    studentCGPA: 8.9,
+    jobId: 'JOB006',
+    companyName: 'DataDriven Analytics',
+    role: 'Data Scientist',
+    appliedDate: '2026-03-01',
+    status: 'Interview',
+    ctc: 16
+  },
+  {
+    id: 'APP013',
+    studentId: 'STU001',
+    studentName: 'Arjun Sharma',
+    studentBranch: 'Computer Science',
+    studentCGPA: 8.9,
+    jobId: 'JOB005',
+    companyName: 'SecureNet Systems',
+    role: 'Security Analyst',
+    appliedDate: '2026-03-05',
+    status: 'Applied',
+    ctc: 13
   },
   {
     id: 'APP002',
@@ -395,7 +434,7 @@ export const mockApplications = [
     jobId: 'JOB002',
     companyName: 'CloudTech Solutions',
     role: 'Backend Developer',
-    appliedDate: '2024-02-22',
+    appliedDate: '2026-02-22',
     status: 'Interview',
     ctc: 15
   },
@@ -408,7 +447,7 @@ export const mockApplications = [
     jobId: 'JOB008',
     companyName: 'TechCorp',
     role: 'Data Analyst',
-    appliedDate: '2024-02-21',
+    appliedDate: '2026-02-21',
     status: 'Rejected',
     ctc: 10
   },
@@ -421,7 +460,7 @@ export const mockApplications = [
     jobId: 'JOB002',
     companyName: 'CloudTech Solutions',
     role: 'Backend Developer',
-    appliedDate: '2024-02-23',
+    appliedDate: '2026-02-23',
     status: 'Offer',
     ctc: 15
   },
@@ -434,7 +473,7 @@ export const mockApplications = [
     jobId: 'JOB003',
     companyName: 'CloudTech Solutions',
     role: 'DevOps Engineer',
-    appliedDate: '2024-02-24',
+    appliedDate: '2026-02-24',
     status: 'Shortlisted',
     ctc: 14
   },
@@ -447,7 +486,7 @@ export const mockApplications = [
     jobId: 'JOB004',
     companyName: 'MobileFirst Inc',
     role: 'Mobile Developer',
-    appliedDate: '2024-02-26',
+    appliedDate: '2026-02-26',
     status: 'Offer',
     ctc: 11
   },
@@ -460,7 +499,7 @@ export const mockApplications = [
     jobId: 'JOB005',
     companyName: 'SecureNet Systems',
     role: 'Security Analyst',
-    appliedDate: '2024-03-06',
+    appliedDate: '2026-03-06',
     status: 'Applied',
     ctc: 13
   },
@@ -473,7 +512,7 @@ export const mockApplications = [
     jobId: 'JOB006',
     companyName: 'DataDriven Analytics',
     role: 'Data Scientist',
-    appliedDate: '2024-03-11',
+    appliedDate: '2026-03-11',
     status: 'Shortlisted',
     ctc: 16
   },
@@ -486,7 +525,7 @@ export const mockApplications = [
     jobId: 'JOB005',
     companyName: 'SecureNet Systems',
     role: 'Security Analyst',
-    appliedDate: '2024-03-07',
+    appliedDate: '2026-03-07',
     status: 'Offer',
     ctc: 13
   },
@@ -499,7 +538,7 @@ export const mockApplications = [
     jobId: 'JOB008',
     companyName: 'TechCorp',
     role: 'Data Analyst',
-    appliedDate: '2024-02-22',
+    appliedDate: '2026-02-22',
     status: 'Applied',
     ctc: 10
   }
@@ -513,7 +552,7 @@ export const mockInterviews = [
     companyName: 'CloudTech Solutions',
     role: 'Backend Developer',
     round: 'Technical Round 1',
-    date: '2024-03-25',
+    date: '2026-03-25',
     time: '10:00 AM',
     mode: 'Online',
     link: 'https://meet.google.com/xyz-abc-def',
@@ -526,7 +565,7 @@ export const mockInterviews = [
     companyName: 'MobileFirst Inc',
     role: 'Mobile Developer',
     round: 'HR Round',
-    date: '2024-03-26',
+    date: '2026-03-26',
     time: '02:00 PM',
     mode: 'Offline',
     venue: 'Seminar Hall, Block A',
@@ -539,7 +578,7 @@ export const mockInterviews = [
     companyName: 'DataDriven Analytics',
     role: 'Data Scientist',
     round: 'Technical Round 1',
-    date: '2024-03-27',
+    date: '2026-03-27',
     time: '11:00 AM',
     mode: 'Online',
     link: 'https://zoom.us/j/123456789',
@@ -552,7 +591,7 @@ export const mockInterviews = [
     companyName: 'DataDriven Analytics',
     role: 'Data Scientist',
     round: 'Group Discussion',
-    date: '2024-03-28',
+    date: '2026-03-28',
     time: '03:00 PM',
     mode: 'Offline',
     venue: 'Conference Room 2, Block B',
@@ -565,7 +604,7 @@ export const mockInterviews = [
     companyName: 'TechCorp',
     role: 'Software Engineer',
     round: 'Technical Round 2',
-    date: '2024-03-05',
+    date: '2026-03-05',
     time: '09:30 AM',
     mode: 'Online',
     link: 'https://meet.google.com/abc-def-ghi',
@@ -581,9 +620,9 @@ export const mockOffers = [
     companyName: 'TechCorp',
     role: 'Software Engineer',
     ctc: 12,
-    joiningDate: '2024-07-15',
+    joiningDate: '2026-07-15',
     location: 'Bangalore',
-    offerDate: '2024-03-12',
+    offerDate: '2026-03-12',
     status: 'Accepted',
     breakdown: {
       base: 9.6,
@@ -598,9 +637,9 @@ export const mockOffers = [
     companyName: 'CloudTech Solutions',
     role: 'Backend Developer',
     ctc: 15,
-    joiningDate: '2024-07-20',
+    joiningDate: '2026-07-20',
     location: 'Hyderabad',
-    offerDate: '2024-03-15',
+    offerDate: '2026-03-15',
     status: 'Accepted',
     breakdown: {
       base: 12,
@@ -615,9 +654,9 @@ export const mockOffers = [
     companyName: 'MobileFirst Inc',
     role: 'Mobile Developer',
     ctc: 11,
-    joiningDate: '2024-08-01',
+    joiningDate: '2026-08-01',
     location: 'Pune',
-    offerDate: '2024-03-18',
+    offerDate: '2026-03-18',
     status: 'Pending',
     breakdown: {
       base: 8.8,
@@ -632,9 +671,9 @@ export const mockOffers = [
     companyName: 'SecureNet Systems',
     role: 'Security Analyst',
     ctc: 13,
-    joiningDate: '2024-07-25',
+    joiningDate: '2026-07-25',
     location: 'Bangalore',
-    offerDate: '2024-03-20',
+    offerDate: '2026-03-20',
     status: 'Accepted',
     breakdown: {
       base: 10.4,
@@ -650,7 +689,7 @@ export const mockNotifications = [
     title: 'New Job Posted',
     message: 'CloudTech Solutions has posted a new job for Backend Developer',
     type: 'job',
-    date: '2024-03-20',
+    date: '2026-03-20',
     read: false
   },
   {
@@ -658,7 +697,7 @@ export const mockNotifications = [
     title: 'Application Shortlisted',
     message: 'Your application for DevOps Engineer at CloudTech Solutions has been shortlisted',
     type: 'application',
-    date: '2024-03-18',
+    date: '2026-03-18',
     read: false
   },
   {
@@ -666,7 +705,7 @@ export const mockNotifications = [
     title: 'Interview Scheduled',
     message: 'Interview scheduled for Backend Developer role on March 25, 2024',
     type: 'interview',
-    date: '2024-03-17',
+    date: '2026-03-17',
     read: true
   },
   {
@@ -674,7 +713,7 @@ export const mockNotifications = [
     title: 'Application Deadline',
     message: 'Last date to apply for Security Analyst position is April 1, 2024',
     type: 'deadline',
-    date: '2024-03-16',
+    date: '2026-03-16',
     read: true
   },
   {
@@ -682,7 +721,7 @@ export const mockNotifications = [
     title: 'Offer Letter Received',
     message: 'Congratulations! You have received an offer from TechCorp',
     type: 'offer',
-    date: '2024-03-12',
+    date: '2026-03-12',
     read: true
   }
 ];

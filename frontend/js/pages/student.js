@@ -72,8 +72,8 @@ function renderDashboard(user) {
                     ${studentApps.length > 0 ? studentApps.slice(0, 4).map(app => `
                         <div class="flex items-center justify-between p-5 bg-slate-50/50 hover:bg-slate-50 rounded-3xl border border-transparent hover:border-slate-200 transition-all group">
                             <div class="flex items-center gap-5">
-                                <div class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-primary-dark font-black text-xl group-hover:scale-110 transition-transform">
-                                    ${app.companyName[0]}
+                                <div class="w-14 h-14 bg-white rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-primary-dark group-hover:scale-110 transition-transform">
+                                    <i data-lucide="building-2" class="w-6 h-6"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-text-primary text-lg">${app.role}</h4>
@@ -139,10 +139,10 @@ function renderJobs(user) {
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             ${mockJobs.filter(j => j.status === 'Active').map((job, index) => `
-                <div class="bg-card p-8 rounded-[2.5rem] border border-slate-100 shadow-premium card-p animate-fade-in-up group" style="animation-delay: ${index * 100}ms">
+                <div class="bg-card p-8 rounded-[2.5rem] border border-slate-100 shadow-premium card-p animate-fade-in-up group cursor-pointer transition-all" style="animation-delay: ${index * 100}ms" onclick="const details = this.querySelector('.job-details'); if(details) { details.classList.toggle('hidden'); if(!details.classList.contains('hidden')) { window.toast?.show('Showing Details for ' + '${job.title}', 'info'); } }">
                     <div class="flex items-center justify-between mb-8">
-                        <div class="w-16 h-16 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center text-2xl font-black text-primary shadow-inner group-hover:scale-110 transition-transform">
-                            ${job.companyName[0]}
+                        <div class="w-16 h-16 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl flex items-center justify-center text-primary shadow-inner group-hover:scale-110 transition-transform">
+                            <i data-lucide="briefcase" class="w-8 h-8"></i>
                         </div>
                         <div class="flex flex-col items-end gap-2">
                             <span class="px-4 py-1.5 bg-emerald-50 text-emerald-600 text-[10px] font-black uppercase tracking-widest rounded-full border border-emerald-100 shadow-sm">
@@ -171,6 +171,17 @@ function renderJobs(user) {
                         <div>
                             <p class="text-[10px] uppercase text-text-muted font-black tracking-[0.15em] mb-1">Locality</p>
                             <p class="text-sm font-black text-text-primary truncate">${job.location}</p>
+                        </div>
+                    </div>
+
+                    <div class="job-details hidden mt-4 pt-6 border-t border-slate-100/60 animate-fade-in-up">
+                        <p class="text-sm font-medium text-text-muted leading-relaxed mb-4">
+                            ${job.description || 'Provide detailed insights and descriptions regarding this role.'}
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4 text-xs font-bold text-text-muted bg-slate-50 p-4 rounded-2xl mb-6 border border-slate-100">
+                            <div class="flex items-center whitespace-nowrap"><div class="w-1.5 h-1.5 rounded-full bg-primary mr-2"></div>Openings: ${job.openings || 'N/A'}</div>
+                            <div class="flex items-center whitespace-nowrap"><div class="w-1.5 h-1.5 rounded-full bg-primary mr-2"></div>Min CGPA: ${job.minCGPA || '0.0'}</div>
+                            <div class="flex items-center whitespace-nowrap"><div class="w-1.5 h-1.5 rounded-full bg-error mr-2"></div>Ends: ${job.applicationDeadline || 'TBA'}</div>
                         </div>
                     </div>
 
@@ -210,8 +221,8 @@ function renderApplications(user) {
                             <tr class="hover:bg-slate-50/50 transition-all group">
                                 <td class="px-8 py-6">
                                     <div class="flex items-center gap-4">
-                                        <div class="w-12 h-12 bg-white border border-slate-100 rounded-2xl flex items-center justify-center font-black text-primary shadow-sm group-hover:scale-110 transition-transform">
-                                            ${app.companyName[0]}
+                                        <div class="w-12 h-12 bg-white border border-slate-100 rounded-2xl flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
+                                            <i data-lucide="building" class="w-6 h-6"></i>
                                         </div>
                                         <span class="font-black text-text-primary">${app.companyName}</span>
                                     </div>
@@ -280,18 +291,18 @@ function renderProfile(user) {
                     </div>
                 </div>
                 <div class="flex-1">
-                    <h1 class="text-3xl font-bold text-text-primary mb-2">${student.name}</h1>
-                    <p class="text-text-muted mb-4 font-medium">${student.branch} • Year ${student.year} • Roll: ${student.rollNo}</p>
+                    <h1 id="profile-name" class="text-3xl font-bold text-text-primary mb-2">${student.name}</h1>
+                    <p class="text-text-muted mb-4 font-medium"><span id="profile-branch">${student.branch}</span> • Year ${student.year} • Roll: ${student.rollNo}</p>
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
                         <div class="flex items-center gap-2 text-sm text-text-muted">
-                            <i data-lucide="mail" class="w-4 h-4"></i> ${student.email}
+                            <i data-lucide="mail" class="w-4 h-4"></i> <span id="profile-email" class="transition-all">${student.email}</span>
                         </div>
                         <div class="flex items-center gap-2 text-sm text-text-muted">
-                            <i data-lucide="phone" class="w-4 h-4"></i> ${student.phone}
+                            <i data-lucide="phone" class="w-4 h-4"></i> <span id="profile-phone" class="transition-all">${student.phone}</span>
                         </div>
                     </div>
                 </div>
-                <button class="px-6 py-3 bg-primary text-white font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all">
+                <button id="edit-profile-btn" onclick="window.editStudentProfile()" class="px-6 py-3 bg-primary text-white font-bold rounded-2xl hover:scale-105 active:scale-95 transition-all">
                     Edit Profile
                 </button>
             </div>
@@ -301,12 +312,15 @@ function renderProfile(user) {
             <div class="md:col-span-2 space-y-8">
                 <div class="bg-card rounded-3xl p-8 border border-gray-100 shadow-sm">
                     <h3 class="text-xl font-bold text-text-primary mb-6">Skills & Expertise</h3>
-                    <div class="flex flex-wrap gap-3">
+                    <div class="flex flex-wrap gap-3" id="skills-container">
                         ${student.skills.map(skill => `
                             <span class="px-4 py-2 bg-background rounded-xl text-sm font-bold text-text-primary border border-gray-100 transition-hover hover:border-primary hover:text-primary cursor-default">
                                 ${skill}
                             </span>
                         `).join('')}
+                    </div>
+                    <div id="add-skill-form" class="mt-4 hidden animate-fade-in-up">
+                        <input type="text" id="new-skill-input" placeholder="Type a skill & press Enter" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-sm font-bold" onkeypress="if(event.key === 'Enter') { window.addStudentSkill(this.value); this.value=''; }">
                     </div>
                 </div>
             </div>
@@ -344,8 +358,8 @@ function renderInterviews(user) {
                     </div>
                     
                     <div class="flex items-center gap-4 mb-8">
-                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-2xl font-bold text-primary">
-                            ${i.companyName[0]}
+                        <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary">
+                            <i data-lucide="video" class="w-8 h-8"></i>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-text-primary mb-1">${i.companyName}</h3>
@@ -397,8 +411,8 @@ function renderOffers(user) {
                     </div>
 
                     <div class="flex items-center gap-6 mb-8">
-                        <div class="w-20 h-20 bg-emerald-50 rounded-3xl flex items-center justify-center text-3xl font-bold text-emerald-600">
-                            ${o.companyName[0]}
+                        <div class="w-20 h-20 bg-emerald-50 rounded-3xl flex items-center justify-center text-emerald-600">
+                            <i data-lucide="award" class="w-10 h-10"></i>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-text-primary mb-1">${o.companyName}</h3>
@@ -422,7 +436,7 @@ function renderOffers(user) {
                     </div>
 
                     <div class="flex gap-4">
-                        <button class="flex-1 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-100">View Offer Letter</button>
+                        <button onclick="window.toast?.show('Opening offer letter for ${o.companyName}', 'success'); setTimeout(() => window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank'), 500);" class="flex-1 py-4 bg-emerald-600 text-white font-bold rounded-2xl hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-100">View Offer Letter</button>
                         <button class="flex-1 py-4 bg-gray-100 text-text-primary font-bold rounded-2xl hover:bg-gray-200 transition-colors">Details</button>
                     </div>
                 </div>
